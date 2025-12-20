@@ -3,9 +3,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        dotgothic: ['var(--font-dotgothic)', 'mono'],
-        goudy: ['var(--font-goudy)', 'serif'],
+        dotgothic: ['', 'monospace'],
+        goudy: ['', 'serif'],
       },
-    },
+    }, 
   },
 };
