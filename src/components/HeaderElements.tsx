@@ -10,7 +10,7 @@ interface headerImgElement {
     imageSource?: string;
 }
 
-export function HeaderTextElement({backgroundImage, text} : headerTextElement) {
+export function HeaderTextElement({ backgroundImage, text }: headerTextElement) {
   const getLines = (text: string): string[] => {
     const lowerText = text.toLowerCase();
 
@@ -33,21 +33,34 @@ export function HeaderTextElement({backgroundImage, text} : headerTextElement) {
   const lines = getLines(text);
 
   return (
-    <div className="relative w-1/5 h-full flex items-center justify-center overflow-hidden">
+    <div className="relative h-full flex items-center justify-center overflow-hidden
+        sm: w-1/2
+        md: w-1/3
+        lg: w-1/4
+        xl: w-1/5
+    ">
       <Image
         src={backgroundImage}
         alt="decorative flower background"
         fill
         className="object-cover absolute inset-0 z-0"
-        unoptimized 
+        unoptimized
       />
 
-      <div className="relative z-10 text-center px-4">
+      <div className="relative z-10 
+        sm:px-2
+        md:px-2
+        lg:px-2
+        xl:px-4
+        ">
         {lines.map((line, index) => (
           <h2
             key={index}
-            className={`text-white font-medium leading-tight text-start ${
-              lines.length > 1 ? 'text-2xl md:text-3xl' : 'text-3xl md:text-4xl'
+            className={`text-white text-start 
+              sm:text-xl   
+              md:text-xl   
+              lg:text-2xl  
+              xl:text-3xl   
             }`}
           >
             {line}
@@ -62,7 +75,11 @@ export function HeaderImgElement({imageSource}: headerImgElement) {
     return (
         <div className="flex items-center justify-center bg-white text-midnight ">
             {!imageSource ? (
-                <h1 className='font-bold text-4xl text-start'>Cape⁴<br />labs</h1>
+                <h1 className=' font-bold  text-start
+                sm:text-2xl 
+                md:text-4xl 
+                lg:text-4xl 
+                '>Cape⁴<br />labs</h1>
             ) : (
                 <Image src={imageSource} alt='flower' width={100} height={100} className='h-full w-full' quality={100} />
 
