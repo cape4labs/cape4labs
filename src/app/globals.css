@@ -12,31 +12,27 @@ body {
 
 
 @font-face {
-  font-family: DotGothic16-Regular;
+  font-family: DotGothic16;
   font-style: normal;
+  font-weight: normal;
   font-display: swap;
-  src: url("/fonts/DotGothic16-Regular.ttf") format("ttf");
+  src: url("/fonts/DotGothic16.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: SortsMillGoudy-Regular;
+  font-family: SortsMillGoudy;
   font-style: normal;
+  font-weight: normal;
   font-display: swap;
-  src: url("/public/fonts/SortsMillGoudy-Regular.ttf") format("ttf");
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  src: url("/fonts/SortsMillGoudy.ttf") format("truetype");
 }
 
 @theme {
   --color-midnight: #202052;
-  --font-primary: "DotGothic16", mono;
-  --font-secondary: "SortsMillGoudy-Regular", sans;
+  --font-primary: "DotGothic16", monospace;
+  --font-secondary: "SortsMillGoudy", sans-serif;
 }
+
 
 @media (prefers-color-scheme: dark) {
   :root {

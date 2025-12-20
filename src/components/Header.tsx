@@ -1,10 +1,9 @@
-import Image from 'next/image'
 import { HeaderImgElement, HeaderTextElement } from './HeaderElements'
 
 
 export default function Header() {
   return (
-    <header className="flex flex-row bg-midnight w-full h-28 sticky justify-center font-primary ">
+    <header className="flex flex-row bg-midnight w-full h-28 sticky justify-center font-primary">
       <HeaderImgElement imageSource='' />
       <HeaderTextElement backgroundImage='/img/nav/first-nav-bg.png' text='About cape⁴labs' />
       <HeaderImgElement imageSource='/img/nav/first-nav-flower.png' />
