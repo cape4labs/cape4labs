@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Header() {
     return (
-        <header className="flex flex-row bg-midnight w-full h-28 sticky justify-center font-primary">
+        <header className="flex flex-row bg-midnight w-full h-28 sticky justify-center font-primary top-0 z-10">
             <Logo />
             <Section backgroundImageSource="/img/nav/first-nav-bg.png" text="About" />
             <Flower imageSource="/img/nav/first-nav-flower.png" />

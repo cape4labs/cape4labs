@@ -38,3 +38,9 @@ body {
         --foreground: #ededed;
     }
 }
+
+@layer utilities {
+    .animate-spin-slow {
+        animation: spin 20s linear infinite;
+    }
+}
