@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-const FOLDER_COUNT = 12
+const FOLDER_COUNT = 9
 const ASSETS = {
     center: "/img/info/escaper.png",
     folder: "/img/info/folder.png",
@@ -8,19 +8,30 @@ const ASSETS = {
 
 export default function About() {
     return (
-        <main className="relative flex min-h-screen flex-col items-center justify-center gap-12 px-6 py-20 md:flex-row md:justify-around md:px-12">
+        <main className="relative flex max-w-5/6 h-auto flex-col items-center justify-center md:justify-around py-12 px-6 md:flex-row md:px-12">
             {/* Content Section */}
-            <article className="max-w-prose text-center text-lg leading-relaxed text-midnight md:w-1/2 md:text-left md:text-xl">
-                <h2 className="mb-4 text-3xl font-bold">About Our System</h2>
+            <article className="max-w-prose text-center leading-relaxed text-midnight md:w-1/2 md:text-left md:text-xl">
+                <h2 className="mb-4 text-5xl font-bold font-secondary">About Our System</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam earum ratione
-                    atque reiciendis corrupti! Aperiam voluptas delectus vel voluptate ducimus ab
-                    voluptatem, sit labore corrupti accusamus distinctio? Dolorum, fugiat deserunt.
+                    BASEMALL is a decentralized data marketplace that empowers individuals and
+                    businesses to share, monetize, and access high-quality data with full
+                    transparency and trust. In today’s world, data is one of the most valuable
+                    assets — yet it is often locked within silos, underutilized, or traded without
+                    fairness. BASEMALL changes that by creating a secure, user-friendly ecosystem
+                    where: Data providers can list and monetize their datasets safely, maintaining
+                    control and ownership. Data buyers can easily discover, purchase, and integrate
+                    reliable datasets for AI models, analytics, and innovation. Developers &
+                    enterprises can build on top of BASEMALL’s infrastructure, unlocking new
+                    possibilities for data-driven products and services. By combining blockchain
+                    technology with transparent pricing and identity verification, BASEMALL ensures
+                    trust, accountability, and fair value exchange for all participants. Whether you
+                    are a researcher, a startup, or a global company, BASEMALL is your gateway to a
+                    new era of open, ethical, and collaborative data economy. cape.
                 </p>
             </article>
 
             {/* Animation Section */}
-            <section className="relative flex aspect-square w-full max-w-100 items-center justify-center md:w-1/2 md:max-w-none">
+            <section className="relative flex aspect-square max-w-100 items-center justify-center">
                 <RotatingFolders />
             </section>
         </main>
@@ -29,9 +40,9 @@ export default function About() {
 
 function RotatingFolders() {
     return (
-        <div className="relative flex h-full w-full items-center justify-center">
+        <div className="relative flex h-full w-full justify-center border">
             {/* Center Image */}
-            <div className="relative z-10 h-24 w-24 overflow-hidden p-2 md:h-32 md:w-32">
+            <div className="relative z-10 w-56 h-56 overflow-hidden p-2">
                 <Image
                     src={ASSETS.center}
                     alt="Central icon"
@@ -61,7 +72,7 @@ function Folder({ index }: { index: number }) {
                 transform: `rotate(${angle}deg) translateY(var(--radius))`,
             }}
         >
-            <div className="relative h-12 w-12 md:h-16 md:w-16">
+            <div className="relative h-20 w-20">
                 <Image
                     src={ASSETS.folder}
                     alt={`Folder ${index + 1}`}
