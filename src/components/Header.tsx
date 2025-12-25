@@ -6,13 +6,21 @@ export default function Header() {
     return (
         <header className="flex flex-row bg-midnight w-full h-28 sticky justify-center font-primary top-0 z-10">
             <Logo />
-            <Section backgroundImageSource="/img/nav/first-nav-bg.png" text="About" href="#about"/>
+            <Section backgroundImageSource="/img/nav/first-nav-bg.png" text="About" href="#about" />
             <Flower imageSource="/img/nav/first-nav-flower.png" />
-            <Section backgroundImageSource="/img/nav/second-nav-bg.png" text="Team" href="#team"/>
+            <Section backgroundImageSource="/img/nav/second-nav-bg.png" text="Team" href="#team" />
             <Flower imageSource="/img/nav/second-nav-flower.png" />
-            <Section backgroundImageSource="/img/nav/third-nav-bg.png" text="Projects" href="#projects"/>
+            <Section
+                backgroundImageSource="/img/nav/third-nav-bg.png"
+                text="Projects"
+                href="#projects"
+            />
             <Flower imageSource="/img/nav/third-nav-flower.png" />
-            <Section backgroundImageSource="/img/nav/fourth-nav-bg.png" text="Contact" href="#contact"/>
+            <Section
+                backgroundImageSource="/img/nav/fourth-nav-bg.png"
+                text="Contact"
+                href="#contact"
+            />
             <Flower imageSource="/img/nav/fourth-nav-flower.png" />
         </header>
     )
@@ -45,25 +53,25 @@ function Flower({ imageSource: source }: { imageSource: string }) {
     )
 }
 
-function Section({ 
-    backgroundImageSource, 
+function Section({
+    backgroundImageSource,
     text,
-    href 
-}: { 
-    backgroundImageSource: string; 
-    text: string;
-    href: string;
+    href,
+}: {
+    backgroundImageSource: string
+    text: string
+    href: string
 }) {
     const handleClick = (e: React.MouseEvent) => {
-        e.preventDefault();
-        const element = document.getElementById(href.replace('#', ''));
+        e.preventDefault()
+        const element = document.getElementById(href.replace("#", ""))
         if (element) {
-            element.scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-            });
+            element.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            })
         }
-    };
+    }
 
     return (
         <a
