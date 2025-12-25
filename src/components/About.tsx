@@ -6,11 +6,11 @@ const ASSETS = {
 
 export default function About() {
     return (
-        <main className="mt-24 relative flex max-w-5/6 h-auto flex-col items-center justify-center md:justify-around py-12 px-6 lg:flex-row md:px-12">
+        <main className="mt-24 relative flex w-full lg:max-w-5/6 h-auto flex-col items-center md:justify-between xl:justify-around py-12 px-6 lg:flex-row md:px-12">
             {/* Content Section */}
-            <article className="max-w-prose text-center leading-relaxed text-midnight md:w-1/2 md:text-left md:text-xl">
-                <h2 className="mb-4 text-5xl font-bold font-secondary">About Our System</h2>
-                <p className="font-primary">
+            <article className="max-w-prose leading-relaxed text-midnight text-left w-full">
+                <h2 className="mb-4 text-3xl font-bold font-secondary w-full">About Our System</h2>
+                <p className="font-primary w-full text-xl">
                     BASEMALL is a decentralized data marketplace that empowers individuals and
                     businesses to share, monetize, and access high-quality data with full
                     transparency and trust. In today’s world, data is one of the most valuable
@@ -29,7 +29,7 @@ export default function About() {
             </article>
 
             {/* Animation Section */}
-            <section className="relative flex aspect-square max-w-100 items-center justify-center">
+            <section className="relative flex aspect-square h-130 sm:h-200 lg:h-auto max-w-100 items-center justify-center">
                 <RotatingFolders />
             </section>
         </main>
@@ -38,14 +38,14 @@ export default function About() {
 
 function RotatingFolders() {
     return (
-        <div className="relative flex h-full w-full justify-center">
+        <div className="relative flex h-full w-full justify-center items-center">
             {/* Center Image */}
-            <div className="relative z-9 w-56 h-56 overflow-hidden p-2 items-center">
+            <div className="relative z-9 w-30 h-30 sm:w-40 sm:h-40  lg:w-56 lg:h-56 overflow-hidden p-2 items-center">
                 <img src={ASSETS.center} alt="Central icon" className="object-contain" />
             </div>
 
             {/* Rotating Ring */}
-            <div className="absolute inset-0 animate-spin-slow [--radius:-140px] md:[--radius:-220px]">
+            <div className="absolute inset-0 animate-spin-slow [--radius:-140px] sm:[--radius:-180px]  lg:[--radius:-220px] ">
                 {Array.from({ length: FOLDER_COUNT }).map((_, i) => (
                     <Folder key={i} index={i} />
                 ))}
@@ -66,8 +66,9 @@ function Folder({ index }: { index: number }) {
         >
             <div
                 className="relative animate-spin-slow-reverse
-                            md:h-20 md:w-20 
-                            lg:h-24 lg:w-24
+                            h-16 w-16
+                            sm:h-24 sm:w-24
+                            lg:h-30 lg:w-30
                             "
             >
                 <img

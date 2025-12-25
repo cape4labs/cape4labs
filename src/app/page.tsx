@@ -11,7 +11,7 @@ export default function Home() {
             <section id="about">
                 <About />
             </section>
-            <section id="artwork">
+            <section id="artwork" className="w-full">
                 <Artwork />
             </section>
             <section id="team">
