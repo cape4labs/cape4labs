@@ -11,21 +11,41 @@ export default function Header() {
         if (element) {
             element.scrollIntoView({ behavior: "smooth", block: "start" })
         }
-        setMobileMenuOpen(false) 
+        setMobileMenuOpen(false)
     }
 
     return (
         <>
             <header className="hidden sm:flex flex-row bg-midnight w-full h-28 sticky top-0 z-10 justify-center font-primary">
                 <Logo />
-                <Section backgroundImageSource="/img/nav/first-nav-bg.png" text="About" href="#about" onClick={handleScroll} />
+                <Section
+                    backgroundImageSource="/img/nav/first-nav-bg.png"
+                    text="About"
+                    href="#about"
+                    onClick={handleScroll}
+                />
                 <Flower imageSource="/img/nav/third-nav-flower.png" />
 
-                <Section backgroundImageSource="/img/nav/second-nav-bg.png" text="Team" href="#team" onClick={handleScroll} />
+                <Section
+                    backgroundImageSource="/img/nav/second-nav-bg.png"
+                    text="Team"
+                    href="#team"
+                    onClick={handleScroll}
+                />
                 <Flower imageSource="/img/nav/second-nav-flower.png" />
-                <Section backgroundImageSource="/img/nav/third-nav-bg.png" text="Projects" href="#projects" onClick={handleScroll} />
+                <Section
+                    backgroundImageSource="/img/nav/third-nav-bg.png"
+                    text="Projects"
+                    href="#projects"
+                    onClick={handleScroll}
+                />
                 <Flower imageSource="/img/nav/third-nav-flower.png" />
-                <Section backgroundImageSource="/img/nav/fourth-nav-bg.png" text="Contact" href="#contact" onClick={handleScroll} />
+                <Section
+                    backgroundImageSource="/img/nav/fourth-nav-bg.png"
+                    text="Contact"
+                    href="#contact"
+                    onClick={handleScroll}
+                />
                 <Flower imageSource="/img/nav/fourth-nav-flower.png" />
             </header>
 
@@ -43,20 +63,40 @@ export default function Header() {
                 <div className="sm:hidden fixed  top-20 z-40 shadow-lg max-w-full overflow-x-hidden w-full">
                     <nav className="flex flex-col bg-white">
                         <div className="flex flex-row items-center">
-                            <Section backgroundImageSource="/img/nav/first-nav-bg.png" text="About" href="#about" onClick={handleScroll} />
+                            <Section
+                                backgroundImageSource="/img/nav/first-nav-bg.png"
+                                text="About"
+                                href="#about"
+                                onClick={handleScroll}
+                            />
                             <Flower imageSource="/img/nav/third-nav-flower.png" />
                         </div>
 
                         <div className="flex flex-row items-center">
-                            <Section backgroundImageSource="/img/nav/second-nav-bg.png" text="Team" href="#team" onClick={handleScroll} />
+                            <Section
+                                backgroundImageSource="/img/nav/second-nav-bg.png"
+                                text="Team"
+                                href="#team"
+                                onClick={handleScroll}
+                            />
                             <Flower imageSource="/img/nav/second-nav-flower.png" />
                         </div>
                         <div className="flex flex-row items-center overflow-x-hidden">
-                            <Section backgroundImageSource="/img/nav/third-nav-bg.png" text="Projects" href="#projects" onClick={handleScroll} />
+                            <Section
+                                backgroundImageSource="/img/nav/third-nav-bg.png"
+                                text="Projects"
+                                href="#projects"
+                                onClick={handleScroll}
+                            />
                             <Flower imageSource="/img/nav/third-nav-flower.png" />
                         </div>
                         <div className="flex flex-row items-center ">
-                            <Section backgroundImageSource="/img/nav/fourth-nav-bg.png" text="Contact" href="#contact" onClick={handleScroll} />
+                            <Section
+                                backgroundImageSource="/img/nav/fourth-nav-bg.png"
+                                text="Contact"
+                                href="#contact"
+                                onClick={handleScroll}
+                            />
                             <Flower imageSource="/img/nav/fourth-nav-flower.png" />
                         </div>
                     </nav>
@@ -82,7 +122,9 @@ function LogoMobile() {
     return (
         <div className="bg-white text-midnight h-full w-1/5 flex items-center justify-center font-primary">
             <h1 className="font-bold text-2xl text-start">
-                Cape⁴<br />labs
+                Cape⁴
+                <br />
+                labs
             </h1>
         </div>
     )
@@ -90,8 +132,10 @@ function LogoMobile() {
 
 function Flower({ imageSource: source }: { imageSource: string }) {
     return (
-        <div className="items-center justify-center bg-white text-midnight h-1/4 
-                        sm:hidden lg:flex sm:h-full">
+        <div
+            className="items-center justify-center bg-white text-midnight h-1/4 
+                        sm:hidden lg:flex sm:h-full"
+        >
             <Image
                 src={source}
                 alt="flower"
