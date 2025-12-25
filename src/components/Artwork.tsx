@@ -4,11 +4,11 @@ const ASSETS = {
 }
 export default function Artwork() {
     return (
-        <div className="h-324 w-full flex flex-col items-center relative">
-            <img src={ASSETS.folders} className="w-64 h-auto absolute top-32 z-9" />
+        <div className="h-324 w-full flex flex-col items-center justify-center">
+            <img src={ASSETS.folders} className="w-64 h-auto z-9" />
             <img
                 src={ASSETS.hand}
-                className="w-full h-auto absolute bottom-32 object-contain z-0"
+                className="w-full h-auto object-contain"
             />
         </div>
     )

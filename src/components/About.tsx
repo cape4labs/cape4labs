@@ -6,7 +6,7 @@ const ASSETS = {
 
 export default function About() {
     return (
-        <main className="mt-24 relative flex max-w-5/6 h-auto flex-col items-center justify-center md:justify-around py-12 px-6 md:flex-row md:px-12">
+        <main className="mt-24 relative flex max-w-5/6 h-auto flex-col items-center justify-center md:justify-around py-12 px-6 lg:flex-row md:px-12">
             {/* Content Section */}
             <article className="max-w-prose text-center leading-relaxed text-midnight md:w-1/2 md:text-left md:text-xl">
                 <h2 className="mb-4 text-5xl font-bold font-secondary">About Our System</h2>
