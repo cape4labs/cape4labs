@@ -3,6 +3,7 @@ import About from "../components/About"
 import Team from "../components/Team"
 import Footer from "../components/Footer"
 import Artwork from "../components/Artwork"
+import Projects from "../components/Projects"
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             <section id="artwork" className="w-full mt-10">
                 <Artwork />
             </section>
+            <Projects />
             <section id="team">
                 <Team />
             </section>
