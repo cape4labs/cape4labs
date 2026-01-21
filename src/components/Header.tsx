@@ -3,6 +3,18 @@
 import Image from "next/image"
 import { useState } from "react"
 
+const ASSETS = {
+    bg1: "/img/nav/bg1.png",
+    bg2: "/img/nav/bg2.png",
+    bg3: "/img/nav/bg3.png",
+    bg4: "/img/nav/bg4.png",
+
+    flower1: "/img/nav/flower1.png",
+    flower2: "/img/nav/flower2.png",
+    flower3: "/img/nav/flower3.png",
+    flower4: "/img/nav/flower4.png",
+}
+
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -19,34 +31,34 @@ export default function Header() {
             <header className="hidden sm:flex flex-row bg-midnight w-full h-28 sticky top-0 z-10 justify-center font-primary">
                 <Logo />
                 <Section
-                    backgroundImageSource="/img/nav/first-nav-bg.png"
+                    backgroundImageSource={ASSETS.bg1}
                     text="About"
                     href="#about"
                     onClick={handleScroll}
                 />
-                <Flower imageSource="/img/nav/third-nav-flower.png" />
+                <Flower imageSource={ASSETS.flower1} />
 
                 <Section
-                    backgroundImageSource="/img/nav/second-nav-bg.png"
+                    backgroundImageSource={ASSETS.bg2}
                     text="Team"
                     href="#team"
                     onClick={handleScroll}
                 />
-                <Flower imageSource="/img/nav/second-nav-flower.png" />
+                <Flower imageSource={ASSETS.flower2} />
                 <Section
-                    backgroundImageSource="/img/nav/third-nav-bg.png"
+                    backgroundImageSource={ASSETS.bg3}
                     text="Projects"
                     href="#projects"
                     onClick={handleScroll}
                 />
-                <Flower imageSource="/img/nav/third-nav-flower.png" />
+                <Flower imageSource={ASSETS.flower3} />
                 <Section
-                    backgroundImageSource="/img/nav/fourth-nav-bg.png"
+                    backgroundImageSource={ASSETS.bg4}
                     text="Contact"
                     href="#contact"
                     onClick={handleScroll}
                 />
-                <Flower imageSource="/img/nav/fourth-nav-flower.png" />
+                <Flower imageSource={ASSETS.flower4} />
             </header>
 
             <header className="sm:hidden flex items-center justify-between bg-midnight w-full h-20 sticky top-0 z-50">
@@ -64,40 +76,40 @@ export default function Header() {
                     <nav className="flex flex-col bg-white">
                         <div className="flex flex-row items-center">
                             <Section
-                                backgroundImageSource="/img/nav/first-nav-bg.png"
+                                backgroundImageSource={ASSETS.bg1}
                                 text="About"
                                 href="#about"
                                 onClick={handleScroll}
                             />
-                            <Flower imageSource="/img/nav/third-nav-flower.png" />
+                            <Flower imageSource={ASSETS.flower1} />
                         </div>
 
                         <div className="flex flex-row items-center">
                             <Section
-                                backgroundImageSource="/img/nav/second-nav-bg.png"
+                                backgroundImageSource={ASSETS.bg2}
                                 text="Team"
                                 href="#team"
                                 onClick={handleScroll}
                             />
-                            <Flower imageSource="/img/nav/second-nav-flower.png" />
+                            <Flower imageSource={ASSETS.flower2} />
                         </div>
                         <div className="flex flex-row items-center overflow-x-hidden">
                             <Section
-                                backgroundImageSource="/img/nav/third-nav-bg.png"
+                                backgroundImageSource={ASSETS.bg3}
                                 text="Projects"
                                 href="#projects"
                                 onClick={handleScroll}
                             />
-                            <Flower imageSource="/img/nav/third-nav-flower.png" />
+                            <Flower imageSource={ASSETS.flower3} />
                         </div>
                         <div className="flex flex-row items-center ">
                             <Section
-                                backgroundImageSource="/img/nav/fourth-nav-bg.png"
+                                backgroundImageSource={ASSETS.bg4}
                                 text="Contact"
                                 href="#contact"
                                 onClick={handleScroll}
                             />
-                            <Flower imageSource="/img/nav/fourth-nav-flower.png" />
+                            <Flower imageSource={ASSETS.flower4} />
                         </div>
                     </nav>
                 </div>
