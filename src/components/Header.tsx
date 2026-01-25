@@ -41,7 +41,7 @@ function Section({
     return (
         <a
             href={href}
-            className="relative flex items-center justify-center flex-1 transition-all duration-300 hover:brightness-110 bg-midnight-dark max-h-full"
+            className="relative flex items-center justify-center flex-1 transition-all duration-300 hover:brightness-110 max-h-full"
         >
             <img
                 src={backgroundImageSource}
